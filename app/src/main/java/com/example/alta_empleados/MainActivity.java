@@ -1,7 +1,9 @@
 package com.example.alta_empleados;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -152,10 +154,29 @@ public class MainActivity extends AppCompatActivity {
                 registro.setCurp(curp);
                 registro.setFecha_nacimiento(fecha_nacimiento);
 
-                users.push().setValue(registro);
-                Toast.makeText(MainActivity.this, "Alta Empleado", Toast.LENGTH_SHORT).show();
-
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(MainActivity.this);
+                dialogo1.setTitle("Alta de Empleado");
+                dialogo1.setMessage("Deseas dar de alta al empleado?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        users.push().setValue(registro);
+                        Toast.makeText(MainActivity.this, "Alta Exitosa", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        cancelar();
+                    }
+                });
+                dialogo1.show();
+            }
+            public void cancelar ()
+            {
+                myDialog.dismiss();
+                return;
             }
         });
+
     }
 }
