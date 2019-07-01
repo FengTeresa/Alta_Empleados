@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "226930284002",
+    "firebase_url": "https://jelp-9d10e.firebaseio.com",
+    "project_id": "jelp-9d10e",
+    "storage_bucket": "jelp-9d10e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226930284002:android:a85547465009e549",
+        "android_client_info": {
+          "package_name": "com.example.alta_empleados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226930284002-ululfv1uu7i2i59ogjratt6vtgkcam38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0_9d3imMXn-5C0jdqDn8trnSQzlmJBHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226930284002-ululfv1uu7i2i59ogjratt6vtgkcam38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
